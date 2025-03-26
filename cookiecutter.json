@@ -1,0 +1,12 @@
+{
+    "project_name": "2nd brain obsidian template",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "author": "Your name",
+    "author_email": "Your@email.com",
+
+    "_copy_without_render": [
+        "*.js",
+        "*.json",
+        "*.md"
+    ]
+}
