@@ -1,0 +1,21 @@
+[project]
+name = "obsidian-2nd-brain-template"
+version = "1.0.0"
+description = "2nd brain obisidian template"
+authors = [{ name = "Georg Heiler", email = "georg.kf.heiler@gmail.com" }]
+requires-python = "~= 3.13"
+
+[tool.pixi.project]
+platforms = ["linux-64", "osx-arm64", "win-64", "linux-aarch64"]
+channels = ["conda-forge"]
+
+[tool.pixi.environments]
+template = { features = ["template"], solve-group = "template" }
+
+[tool.pixi.feature.template.dependencies]
+cruft = "~=2.16.0"
+cookiecutter = "~=2.6.0"
+
+[tool.pixi.tasks.tpl-init-cruft]
+cmd = "pixi run -e template cruft create https://github.com/geoHeil/second-brain-obsidian-template.git"
+description = "Initialize template with cruft"

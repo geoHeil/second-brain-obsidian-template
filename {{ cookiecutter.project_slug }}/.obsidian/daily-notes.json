@@ -1,0 +1,5 @@
+{
+  "folder": "metaRef/dailyNotes",
+  "template": "templates/daily",
+  "format": "YYYY/MM-MMMM/YYYY-MM-DD-dddd"
+}

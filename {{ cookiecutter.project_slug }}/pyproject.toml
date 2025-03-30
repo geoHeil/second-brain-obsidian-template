@@ -1,0 +1,24 @@
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "1.0.0"
+description = "{{ cookiecutter.project_name }}"
+authors = [{ name = "{{ cookiecutter.author }}", email = "{{ cookiecutter.author_email }}" }]
+requires-python = "~= 3.13"
+
+[tool.pixi.project]
+platforms = ["linux-64", "osx-arm64", "win-64", "linux-aarch64"]
+channels = ["conda-forge"]
+
+[tool.pixi.environments]
+template = { features = ["template"], solve-group = "template" }
+
+[tool.pixi.feature.template.dependencies]
+cruft = "~=2.16.0"
+
+[tool.pixi.feature.template.pypi-dependencies]
+
+[tool.pixi.tasks]
+
+[tool.pixi.tasks.tpl-update]
+cmd = "pixi run -e template cruft update"
+description = "Update from template"
